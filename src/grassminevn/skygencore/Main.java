@@ -19,10 +19,8 @@ import commands.khbCommand;
 import depend.papiDepend;
 import files.tuchetaoV2File;
 import listeners.hologramListener;
-import listeners.playerCraftListener;
 import listeners.playerDeathListener;
 import listeners.playerDropListener;
-import listeners.playerFishListener;
 import listeners.playerJoinListener;
 import listeners.playerPickupListener;
 import manager.GENERATORdatabaseManager;
@@ -65,8 +63,6 @@ public class Main extends JavaPlugin {
 		new autoCompressorsCommand(this);
 		new hologramListener(this);
 		new playerJoinListener(this);
-		new playerCraftListener(this);
-		new playerFishListener(this);
 
 		manager = new generatorManager(this);
 		GENERATORdatabaseManager.loadAllDatabase();
