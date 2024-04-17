@@ -1,7 +1,7 @@
 name: SkyGenCore
 main: grassminevn.skygencore.Main
 author: Cortez_Romeo
-version: 1.0
+version: ${project.version}
 api-version: 1.14
 load: POSTWORLD
 depend:

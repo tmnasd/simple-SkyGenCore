@@ -1,2 +1,1 @@
-# simple-SkyGenCore
-old project
+Original repository: https://github.com/CortezRomeo/simple-SkyGenCore

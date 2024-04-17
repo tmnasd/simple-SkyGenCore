@@ -102,7 +102,12 @@ public class Generator extends BukkitRunnable {
 					if (GENERATORdatabaseManager.generatorItemGenerator.containsKey(data)) {
 						if (GENERATORdatabaseManager.generatorItemGenerator.get(data).isSimilar(item)) {
 							generatorManager.canDrop.put(data, GeneratorDropState.ALREADY_GENERATED);
-							b.getWorld().spawnParticle(Particle.BARRIER, b.getLocation().add(0.5, 1.5, 0.5), 1);
+							try {
+								b.getWorld().spawnParticle(Particle.valueOf("BARRIER"), b.getLocation().add(0.5, 1.5, 0.5), 1);
+							} catch (IllegalArgumentException exception){
+								b.getWorld().spawnParticle(Particle.BLOCK_MARKER, b.getLocation().add(0.5, 1.5, 0.5), 1, Bukkit.createBlockData(Material.LIGHT));
+							}
+
 							canDrop = false;
 						}
 					}

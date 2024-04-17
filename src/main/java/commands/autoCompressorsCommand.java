@@ -15,7 +15,7 @@ import manager.autoCompressorsManager;
 import net.md_5.bungee.api.ChatColor;
 
 public class autoCompressorsCommand implements CommandExecutor {
-	private Main plugin;
+	private final Main plugin;
 
 	public autoCompressorsCommand(Main plugin) {
 		this.plugin = plugin;

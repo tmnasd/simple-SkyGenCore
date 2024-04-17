@@ -104,9 +104,6 @@ public class Main extends JavaPlugin {
 
 					Block block = data.getValue().getLocation().getBlock();
 
-					if (block == null)
-						continue;
-
 					boolean canDrop = false;
 
 					for (Entity e : block.getLocation().getWorld().getNearbyEntities(block.getLocation(),
@@ -185,7 +182,7 @@ public class Main extends JavaPlugin {
 			if (PLAYERdatabaseManager.getData(k) != null) {
 				try {
 					PLAYERdatabaseManager.save(k);
-				} catch (Exception e) {}
+				} catch (Exception ignored) {}
 			}
 
 		if (!GENERATORdatabaseManager.generatorHologramLine1.isEmpty()) {
