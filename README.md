@@ -1,2 +1,0 @@
-# simple-SkyGenCore
-old project
